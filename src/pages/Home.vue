@@ -4,8 +4,10 @@
       <!-- VALUEOF PI -->
       <div class="col mx-auto w-1/2 text-center my-5">
         <p class="text-5xl">VALUE OF PI</p>
-        <div class="col">
-          <p v-if="!!currentPiValue">{{ getFormattedPiValue }}</p>
+        <div v-if="!!currentPiValue" class="col">
+          <p class="break-all text-left">
+            {{ getFormattedPiValue }}
+          </p>
         </div>
       </div>
       <!-- CIRCUMFERENCE OF THE SUN -->
