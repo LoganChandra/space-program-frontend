@@ -6,7 +6,7 @@
         <p class="text-5xl">VALUE OF PI</p>
         <div v-if="!!currentPiValue" class="col">
           <p class="break-all text-left">
-            {{ getFormattedPiValue }}
+            {{ getFormattedPiValue }} 
           </p>
         </div>
       </div>
