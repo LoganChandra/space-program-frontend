@@ -8,9 +8,9 @@ export default {
   mutations: {},
   actions: {
     async get(context, payload) {
-      console.log("GET REQUEST - ", process.env.API_URL + payload.route)
+      console.log("GET REQUEST - ", process.env.API_URL + '/' + payload.route)
       let result = await axios
-        .get(process.env.API_URL + payload.route)
+        .get(process.env.API_URL + '/' + payload.route)
         .catch((err) => err);
       console.log("API result", result)
       if (result && result.status != 200) {
