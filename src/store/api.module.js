@@ -1,5 +1,5 @@
 import axios from "axios";
-
+let API_URL = "https://space-program-pi-calc.herokuapp.com"
 export default {
   namespaced: true,
   state() {
@@ -8,11 +8,10 @@ export default {
   mutations: {},
   actions: {
     async get(context, payload) {
-      console.log("GET REQUEST - ", process.env.API_URL + '/' + payload.route)
+      console.log("GET REQUEST - ", API_URL + '/' + payload.route)
       let result = await axios
-        .get(process.env.API_URL + '/' + payload.route)
+        .get(API_URL + '/' + payload.route)
         .catch((err) => err);
-      console.log("API result", result)
       if (result && result.status != 200) {
         return result.data || {};
       }
