@@ -5,16 +5,14 @@
       <div class="col mx-auto w-1/2 text-center my-5">
         <p class="text-5xl">VALUE OF PI</p>
         <div class="col">
-          <p>{{ getFormattedPiValue }}</p>
+          <p v-if="!!currentPiValue">{{ getFormattedPiValue }}</p>
         </div>
       </div>
       <!-- CIRCUMFERENCE OF THE SUN -->
       <div class="col mx-auto w-1/2 text-center my-5">
         <p class="text-5xl">CIRCUMFERENCE OF THE SUN</p>
         <div class="col">
-          <p>
-            {{ sunCircumference.toFixed(2) }} KM
-          </p>
+          <p v-if="!!sunCircumference">{{ sunCircumference.toFixed(2) }} KM</p>
         </div>
       </div>
     </div>
