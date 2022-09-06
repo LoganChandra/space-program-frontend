@@ -16,5 +16,13 @@ const router = createRouter({
   history: createWebHistory(),
   routes,
 });
-
+router.beforeEach(async (to, from, next) => {
+  console.log("to, from", to, from);
+  if (to.name != "Home") {
+    next({
+      path: "/",
+    });
+  }
+  next()
+});
 export default router;
