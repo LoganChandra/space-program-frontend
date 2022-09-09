@@ -9,6 +9,7 @@ export default {
   actions: {
     async get(context, payload) {
       console.log("GET REQUEST - ", API_URL + '/' + payload.route)
+      console.log("URL", process.env.API_URL);
       let result = await axios
         .get(API_URL + '/' + payload.route)
         .catch((err) => err);

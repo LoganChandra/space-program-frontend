@@ -1,18 +1,19 @@
 <template>
-  <div class="row">
-    <div class="col mt-5">
+  <div class="background page">
+    <div class="col text-white">
       <!-- VALUEOF PI -->
-      <div class="col mx-auto w-1/2 text-center my-5">
-        <p class="text-5xl">VALUE OF PI</p>
+      <div class="module">
+        <p class="title">VALUE OF PI</p>
         <div v-if="!!currentPiValue" class="col">
           <p class="break-all text-left">
             {{ getFormattedPiValue }}
           </p>
         </div>
       </div>
+
       <!-- CIRCUMFERENCE OF THE SUN -->
-      <div class="col mx-auto w-1/2 text-center my-5">
-        <p class="text-5xl">CIRCUMFERENCE OF THE SUN</p>
+      <div class="module">
+        <p class="title">CIRCUMFERENCE OF THE SUN</p>
         <div class="col">
           <p v-if="!!sunCircumference">{{ sunCircumference.toFixed(2) }} KM</p>
         </div>
@@ -48,4 +49,19 @@ export default {
   },
 };
 </script>
-<style></style>
+<style lang="postcss" scoped>
+.background {
+  @apply bg-cover bg-no-repeat;
+  background-image: url("../assets/images/space.jpeg");
+}
+.page {
+  height: 100vh;
+  width: 100vw;
+}
+.module {
+  @apply mx-auto w-1/2 text-center my-5;
+}
+.title {
+  @apply text-5xl font-semibold;
+}
+</style>
