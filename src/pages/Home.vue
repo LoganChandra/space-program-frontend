@@ -65,7 +65,7 @@ export default {
   },
   computed: {
     sunCircumference() {
-      return parseFloat(this.getFormattedPiValue) * this.selectedObject.value;
+      return parseFloat(this.getFormattedPiValue) * this.selectedObject.value * 2;
     },
     getFormattedPiValue() {
       return `${this.currentPiValue[0]}.${this.currentPiValue.slice(
