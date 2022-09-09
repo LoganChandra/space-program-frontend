@@ -79,7 +79,7 @@ export default {
 <style lang="postcss" scoped>
 .background {
   @apply bg-cover bg-no-repeat;
-  background-image: url("../assets/images/space.jpeg");
+  background-image: url("../assets/images/space.png");
 }
 .page {
   @apply pt-10;

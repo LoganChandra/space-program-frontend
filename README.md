@@ -4,4 +4,4 @@ This app displays the current value of pi that is requested on page reload. This
 - npm i 
 - npm run serve
 
-Your app will run in localhost! 
+Your app will run in localhost!
